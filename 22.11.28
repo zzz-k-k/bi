@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 相对路径写法 有三种 -->
+    <img src="同一文件夹下写./加文件名或者直接写文件名" >
+    <img src="如果html文件与img的文件夹在一起，就可以先写/文件夹/文件名">
+    <img src="img/codeblocks练习.c - Code__Blocks 16.01 2022_10_26 12_02_44.png" width="200px" height="200px">
+    <!-- 以上都是下级路径的情况 -->
+    <!-- 以下是上级路径的情况 就是html在文件夹里，图片与html的文件夹在一起 -->
+    <!-- 那么就要返回上一级 用 ../  几个点就是返回上几级 -->
+    <!-- 以上两种方法可以用在一起，如下 -->
+    <img src="../vscode/img/codeblocks练习.c - Code__Blocks 16.01 2022_10_26 12_02_44.png">
+    <!-- 插入音频 src同上  controls用于加上暂停进度条等控制手段-->
+    <audio src="" controls></audio>
+    <!-- autoplay 自动播放   loop 循环播放 这两个和controls一样直接加  但有些浏览器不支持这两个-->
+    <!-- 视频标签 -->
+    <audio src=""></audio>
+    <!-- 视频也要controls 上述音频的三个视频也是一样 注意Google浏览器的autoplay 可以加上muted 实现静音自动播放 不然还是不会自动播放-->
+    <audio src="" controls autoplay muted></audio>
+    <!-- 连接标签 -->
+    <a href="https://www.bilibili.com/video/BV1Kg411T7t9/?p=20&spm_id_from=pageDriver&vd_source=295dd8f7154458bfa83206f6e144d558">学习html</a>
+    <!-- 可以跳转到自己的网页 -->
+    <br>
+    <a href="22.11.27.html"></a>
+    <a href="#"></a>
+    <!-- # 是空连接 -->
+    <!-- 使用target属性决定网页打开的方式 -->
+    <!-- target是属性，属性可以取值，取不同值有不同的效果 -->
+    <a href="22.11.27.html" target="_self">_self是默认值，在当前网页打开,不加也可以</a>
+    <a href="22.11.27.html" target="_blank">_blank是在新的网页打开</a>
+    <hr>
+    <!-- 列表 用于排列整齐的区域，有三种列表  无序列表 有序列表 自定义列表-->
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- ul只能包含li  li可以包含别的 -->
+    <ol>
+        <li></li>
+        <li></li>
+    </ol>
+    <!-- 自定义列表：一个标题下有几个 -->
+    <dl>
+        <dt>这是标题</dt>
+        <dd>这是下面的内容</dd>
+        <dd>这是下面的内容</dd>
+        <dt></dt>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+    <hr>
+    <!-- 表格 -->
+    <table border="2px" width="200px" style="width: 200px;">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- tr相当于行 -->
+<!-- border是边框大小 当然table也有width和height -->
+<!-- 疑问，为什么有些人的height不用放在style里面，img的width不用放在style里面；好像就是这样有些 -->
+<!-- 问题解决了，不把width放在style里面用的是等号，放在style里面用的是 冒号，见上文，两者皆可-->
+<hr>
+<!-- 表格标题 表头单元格标签 -->
+    <table>
+        <caption>学生成绩单</caption>
+        <tr>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- th会使格子中的文字加粗其他和td一样 -->
+    <!-- caption是表格的标题 -->
+    <hr>
+    <!-- 表格的结构标签 thead tbody tfoot -->
+    <!-- 插入，shift + tab 是往回缩 -->
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+<!-- thead tbody tfoot  把表格分成了三部分，这三个可以增加浏览器的执行效率，表面上和不加没有区别 -->
+    <hr>
+    <!-- 合并单元格 -->
+    <!-- 上下合并保留最上的，最右合并保留最左的 -->
+    <table>
+        <tr>
+            <td></td>
+            <td rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>这右边面的被删了</td>
+
+            <td>这左边面的被删了</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+
+        </tr>
+    </table>
+    <!-- 以上两种合并都是给td的 遵循左上原则，把位于右下的删掉，被我空出来的是删掉的 -->
+    <!-- 例子tbody 和 tfoot 不能和在一起，同理-->
+</body>
+</html>
