@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 选择器 + {} -->
+
+</head>
+<body>
+    <!-- 表单标签 -->
+    <!-- input  可以根据type属性值不同功能不同 -->
+    文本框<input type="text">
+    <br>
+    密码框<input type="password">
+    <br>
+    单选框<input type="radio">
+    <br>
+    多选框<input type="checkbox">
+    <br>
+    上传文件<input type="file">
+    <br>
+    <!-- 文本框的占位符，其实就是框框里的提示字 -->
+    <input type="text" placeholder="请输入用户名">
+    <input type="password" placeholder="请输入密码">
+    <br>
+    <!-- 具体的单选功能实现 name属性能将其分组，一组里面只能选一个-->
+    <!-- checked可以默认选中 -->
+    性别<input type="radio" name="sex" checked>男  <input type="radio" name="sex">女
+    <br>
+    <!-- 多文件选择，上传多个文件夹 multiple-->
+    <input type="file" multiple>
+    <br>
+    <!-- 按钮 -->
+    提交按钮<input type="submit">
+    重置按钮<input type="reset">
+    普通按钮要结合js <input type="button">
+    <!-- 想要提交重置按钮能用必须要把其和前面的框框联系在一起，不然不知道要提交重置的是哪个，于是有表单域标签form 如下-->
+    <form action="">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <!-- 用form包括表示这是一整个表单点按钮就会收集这些数据 -->
+    <br>
+    <!-- 只要是属性就是xx = "xx" -->
+    <input type="button" value="你好">
+    <br>
+    <!-- button标签按钮 -->
+    <button type="submit">这里是他的名字</button>
+    <button type="reset"></button>
+    <button type="button"></button>
+    <button>这个也是一个按钮</button>
+    <!-- 语义基本同上 -->
+    <br>
+    <!-- select 下拉菜单  一个内容一个option -->
+    <select name="" id="">
+        <option value="这里是真实的值">这里是显示的值</option>
+        <option value="" selected>2</option>
+    </select>
+    <!-- selected 下拉菜单的默认选中 -->
+    <br>
+    <!-- 文本域标签 可以输入多行文字,就是比较大的text -->
+    <textarea cols="20" rows="10">qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</textarea>
+    <!-- cols是宽度 rows是长度,实际使用时用css开发这个 -->
+    <br>
+    <!-- label标签 -->
+    <!-- 有两种方法实现点字也选中radio -->
+    <!-- 第一种 -->
+    性别<input type="radio" name="sex" id="nan"><label for="nan">男</label>
+    <!-- 第二种方法 -->
+        <label>
+            <input type="radio" name="sex">女
+        </label>
+        <br>
+    <!-- 语义化标签 -->
+    <!-- 无语义的标签div 和span -->
+    <div>这是div标签,div独占一行,后面谁也不能来</div>
+    <span>这是span标签,span不会独占一行</span>
+    <br>
+    <!-- 有语义的布局标签 特点和div一致,但是他有语义,这个一般用于手机端,默认会换行-->
+    <hr>
+    <header>网页头部</header>
+    <nav>网页导航</nav>
+    <footer>网页底部</footer>
+    <aside>网页侧边栏</aside>
+    <section>网页区块区域</section>
+    <article>网页文章</article>
+    <hr>
+    <!-- 字符实体 -->
+    学            霸
+    <!-- 一堆空格变成了一个空格 -->
+    <!-- 想要有很多空格，就需要用字符实体标签 -->
+    &nbsp;&nbsp;
+    <!-- 一个&nbsp是一个空格 -->
+    <hr>
+    <hr>
+    <!-- css  层叠样式表 -->
+    <!-- css写在style里面放在head里面 -->
+    <!-- 见head -->
+    <!-- 算了，摸鱼去吧，到css了，明天再学 -->
+</body>
+</html>
